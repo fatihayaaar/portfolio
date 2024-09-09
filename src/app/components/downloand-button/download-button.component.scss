@@ -1,0 +1,17 @@
+.download-button {
+  font-family: var(--font), sans-serif;
+  margin: 25px 10px;
+  font-size: 11pt;
+  color: var(--text-color);
+  border: solid 2px var(--primary-color);
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  max-width: 200px;
+  text-align: center;
+
+  i {
+    margin-right: 10px;
+  }
+}

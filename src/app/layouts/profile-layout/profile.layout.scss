@@ -1,0 +1,23 @@
+.profile-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .fullName {
+    font-family: var(--font), sans-serif;
+    text-align: center;
+    font-size: 39pt;
+  }
+
+  .title {
+    font-family: var(--font), sans-serif;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 300;
+  }
+
+  .cv-download-container {
+    text-align: center;
+    margin: auto;
+  }
+}

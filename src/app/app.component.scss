@@ -1,0 +1,28 @@
+html, body {
+}
+
+.section {
+  height: 100vh;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  app-header-component {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.fixed-button {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 25pt;
+
+  &:hover {
+  }
+}

@@ -1,0 +1,16 @@
+<div class="section" id="section1">
+  <app-header-component></app-header-component>
+  <app-profile-layout [fullName]="'Fatih Ayar'" [title]="'Computer Engineer'"></app-profile-layout>
+</div>
+<div class="section" id="section2">
+  <h1>Bölüm 2</h1>
+</div>
+<div class="section" id="section3">
+  <h1>Bölüm 3</h1>
+</div>
+
+@if (themeService.getIsDarkTheme()) {
+  <i class="bi bi-brightness-high fixed-button" (click)="onClickTheme()"></i>
+} @else {
+  <i class="bi bi-moon fixed-button" (click)="onClickTheme()"></i>
+}
