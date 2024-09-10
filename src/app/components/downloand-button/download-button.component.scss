@@ -8,7 +8,7 @@
   background-color: var(--button-bg-color);
   padding: 10px 20px;
   cursor: pointer;
-  max-width: 200px;
+  min-width: 200px;
   text-align: center;
   transition: background-color 0.5s ease, color 0.5s ease;
 

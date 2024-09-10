@@ -30,6 +30,20 @@
   }
 }
 
+.fixed-language-button {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 25pt;
+
+  &:hover {
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -1,6 +1,7 @@
 import {Component, Input} from "@angular/core";
 import {DownloadButtonComponent} from "../../components/downloand-button/download-button.component";
 import {AvatarComponent} from "../../components/avatar/avatar.component";
+import {TranslatePipe} from "../../core/pipe/translate.pipe";
 
 @Component({
   selector: 'app-profile-layout',
@@ -9,7 +10,8 @@ import {AvatarComponent} from "../../components/avatar/avatar.component";
   standalone: true,
     imports: [
         DownloadButtonComponent,
-        AvatarComponent
+        AvatarComponent,
+        TranslatePipe
     ]
 })
 export class ProfileLayout {
