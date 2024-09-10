@@ -1,15 +1,17 @@
-html, body {
-}
-
 .section {
   height: 100vh;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background: var(--background);
+  transition: background 0.5s ease, color 0.5s ease;
 
   app-header-component {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  app-profile-layout {
+    animation: fadeIn 1s ease-out forwards;
   }
 }
 
@@ -25,4 +27,19 @@ html, body {
 
   &:hover {
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.loaded .component {
+  animation-delay: 0.2s;
 }

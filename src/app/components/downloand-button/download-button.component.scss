@@ -2,16 +2,21 @@
   font-family: var(--font), sans-serif;
   margin: 25px 10px;
   font-size: 11pt;
-  color: var(--text-color);
+  color: var(--button-text-color);
   border: solid 2px var(--primary-color);
   border-radius: 10px;
-  background-color: transparent;
+  background-color: var(--button-bg-color);
   padding: 10px 20px;
   cursor: pointer;
   max-width: 200px;
   text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
 
   i {
     margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: var(--button-bg-hover-color);
   }
 }
