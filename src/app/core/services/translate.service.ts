@@ -22,7 +22,7 @@ export class TranslateService {
     }
 
     private loadTranslations(lang: string): Observable<any> {
-        return this.http.get<any>(`/assets/i18n/${lang}.json`).pipe(
+        return this.http.get<any>(`assets/i18n/${lang}.json`).pipe(
             map((translations: any) => {
                 this.translations = translations;
                 return translations;
