@@ -1,7 +1,15 @@
-.nav-link {
-  font-family: var(--font), sans-serif;
+.nav-item {
+  user-select: none;
   margin: 25px 10px;
-  font-size: 12pt;
-  color: var(--text-color);
-  transition: background-color 0.5s ease, color 0.5s ease;
+
+  .nav-link {
+    font-family: var(--font), sans-serif;
+    font-size: 12pt;
+    color: var(--text-color);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--text-hover-color);
+    }
+  }
 }

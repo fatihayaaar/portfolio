@@ -1,13 +1,34 @@
 <div class="section" id="section1">
-  <app-header-component></app-header-component>
-  <app-profile-layout [fullName]="'Fatih Ayar'" [title]="'Computer Engineer'"></app-profile-layout>
+    <app-header-component></app-header-component>
+    <app-profile-layout [fullName]="'Fatih Ayar'" [title]="'Computer Engineer'"></app-profile-layout>
 </div>
 <div class="section" id="section2">
-  <h1>Bölüm 2</h1>
+    <div class="animated-element" appScrollAnimator>
+        <app-about-layout></app-about-layout>
+    </div>
 </div>
 <div class="section" id="section3">
-  <h1>Bölüm 3</h1>
+    <div class="animated-element" appScrollAnimator>
+        <app-projects-layout></app-projects-layout>
+    </div>
 </div>
+<div class="section" id="section4">
+    <div class="animated-element" appScrollAnimator>
+        <app-experience-layout></app-experience-layout>
+    </div>
+</div>
+<div class="section" id="section5">
+    <div class="animated-element" appScrollAnimator>
+        <app-education-layout></app-education-layout>
+    </div>
+</div>
+<div class="section" id="section6">
+    <div class="animated-element" appScrollAnimator>
+        <app-contact-layout></app-contact-layout>
+    </div>
+</div>
+
+<app-scroll-to-top-component></app-scroll-to-top-component>
 
 @if (themeService.getIsDarkTheme()) {
   <i class="bi bi-brightness-high fixed-button" (click)="onClickTheme()"></i>
