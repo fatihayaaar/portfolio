@@ -1,5 +1,5 @@
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import * as pdfjsLib from 'pdfjs-dist';
 
 @Component({
@@ -11,7 +11,7 @@ import * as pdfjsLib from 'pdfjs-dist';
 export class PdfViewerComponent implements OnInit {
   @ViewChild('pdfContainer', { static: true }) pdfContainer!: ElementRef<HTMLDivElement>;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { url: string }) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { url: string }, public dialogRef: MatDialogRef<PdfViewerComponent>) {}
 
   ngOnInit() {
     (pdfjsLib as any).GlobalWorkerOptions.workerSrc = 'assets/pdf.worker.min.js';
@@ -51,5 +51,9 @@ export class PdfViewerComponent implements OnInit {
     page.render(renderContext);
 
     canvas.style.width = '100%';
+  }
+
+  onCloseClick() {
+    this.dialogRef.close();
   }
 }

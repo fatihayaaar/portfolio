@@ -5,7 +5,7 @@
         <h1 class="title">{{ title }}</h1>
         <div class="row cv-download-container mt-3">
             <div class="col">
-                <app-download-component [text]=" 'download_resume' | translate "></app-download-component>
+                <app-download-component [text]=" 'download_resume' | translate " (click)="downloadFile('fatih-ayar-cv.pdf')"></app-download-component>
             </div>
             <div class="col">
                 <div class="show-btn" (click)="showPdf()">

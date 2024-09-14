@@ -18,4 +18,11 @@ export class ProfileLayout {
     showPdf() {
         this.showPdfOnClick.emit();
     }
+
+    downloadFile(fileName: string): void {
+        const link = document.createElement('a');
+        link.href = `assets/${fileName}`;
+        link.download = fileName;
+        link.click();
+    }
 }
