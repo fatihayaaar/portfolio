@@ -12,6 +12,8 @@ import {ProjectsLayout} from "./layouts/projects-layout/projects.layout";
 import {ScrollTopTopComponent} from "./components/scroll-to-top/scroll-top-top.component";
 import {TranslatePipe} from "./core/pipe/translate.pipe";
 import {TranslateService} from "./core/services/translate.service";
+import {PdfViewerComponent} from "./components/pdf-viewer/pdf-viewer.component";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-root',
@@ -22,9 +24,25 @@ import {TranslateService} from "./core/services/translate.service";
 })
 export class AppComponent {
 
-  constructor(protected themeService: ThemeService, @Inject(DOCUMENT) protected document: Document, private translator: TranslateService) {
+  constructor(
+      protected themeService: ThemeService,
+      @Inject(DOCUMENT) protected document: Document,
+      private translator: TranslateService,
+      private dialog: MatDialog,
+  ) {
     document.body.setAttribute('data-theme', themeService.getIsDarkTheme() ? "dark" : "light");
     document.body.style.backgroundColor = 'var(--background-color)';
+  }
+
+  openPdfViewer() {
+    const pdfUrl = 'assets/fatih-ayar-cv.pdf';
+
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.data = { url: pdfUrl };
+    dialogConfig.enterAnimationDuration = '0ms';
+    dialogConfig.exitAnimationDuration = '0ms';
+
+    this.dialog.open(PdfViewerComponent, dialogConfig);
   }
 
   onClickTheme() {

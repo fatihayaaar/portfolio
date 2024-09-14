@@ -1,14 +1,16 @@
 .download-button {
   font-family: var(--font), sans-serif;
-  margin: 25px 10px;
+  margin: 25px 0;
   font-size: 11pt;
   color: var(--button-text-color);
   border: solid 2px var(--primary-color);
   border-radius: 10px;
   background-color: var(--button-bg-color);
-  padding: 10px 20px;
+  padding: 0 20px;
+  height: 45px;
+  line-height: 41px;
   cursor: pointer;
-  min-width: 200px;
+  min-width: 250px;
   text-align: center;
   transition: background-color 0.5s ease, color 0.5s ease;
 

@@ -1,6 +1,10 @@
 <div class="section" id="section1">
     <app-header-component></app-header-component>
-    <app-profile-layout [fullName]="'Fatih Ayar'" [title]="'computer_engineer' | translate"></app-profile-layout>
+    <app-profile-layout
+            [fullName]="'Fatih Ayar'"
+            [title]="'computer_engineer' | translate"
+            (showPdfOnClick)="openPdfViewer()">
+    </app-profile-layout>
 </div>
 <div class="section" id="section3">
     <div class="animated-element" appScrollAnimator>

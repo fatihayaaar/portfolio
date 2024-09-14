@@ -15,10 +15,42 @@
     text-align: center;
     font-size: 15pt;
     font-weight: 300;
+    line-height: 0;
+    margin: 0 0 20px;
+    padding: 0;
   }
 
   .cv-download-container {
     text-align: center;
     margin: auto;
+
+    .row {
+      padding: 0;
+      margin: 0;
+    }
+
+    .col {
+      padding: 5px;
+    }
+
+    .show-btn {
+      font-family: var(--font), sans-serif;
+      margin: 25px 0;
+      font-size: 18pt;
+      color: var(--button-text-color);
+      border: solid 2px var(--primary-color);
+      border-radius: 10px;
+      background-color: var(--button-bg-color);
+      padding: 0 15px;
+      line-height: 45px;
+      height: 45px;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.5s ease, color 0.5s ease;
+
+      &:hover {
+        background-color: var(--button-bg-hover-color);
+      }
+    }
   }
 }

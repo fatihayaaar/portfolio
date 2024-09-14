@@ -3,8 +3,16 @@
         <app-avatar-component [imagePath]="'assets/profile.jpeg'" [width]="'130px'" [height]="'130px'"></app-avatar-component>
         <h1 class="fullName">{{ fullName }}</h1>
         <h1 class="title">{{ title }}</h1>
-        <div class="cv-download-container mt-3">
-            <app-download-component [text]=" 'download_resume' | translate "></app-download-component>
+        <div class="row cv-download-container mt-3">
+            <div class="col">
+                <app-download-component [text]=" 'download_resume' | translate "></app-download-component>
+            </div>
+            <div class="col">
+                <div class="show-btn" (click)="showPdf()">
+                    <i class="bi bi-eye"></i>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
