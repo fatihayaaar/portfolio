@@ -1,0 +1,19 @@
+<div *ngFor="let experience of experienceList" class="experience-card">
+    <div class="company-details">
+        <img [src]="experience.companyLogo" alt="Logo" />
+        <div>
+            <h2>{{ experience.companyName }}</h2>
+            <p>{{ experience.duration }} • {{ experience.location }}</p>
+        </div>
+    </div>
+
+    <div *ngFor="let position of experience.positions; let i = index" class="position-details">
+        <h3>{{ position.title }}</h3>
+        <p>{{ position.type }} • {{ position.startDate }} - {{ position.endDate || 'Halen' }}</p>
+        <p [innerHTML]="formatDescription(position.description)" class="description" [class.collapsed]="experience.isCollapsed">
+        </p>
+        <a *ngIf="position.description.length > 200" (click)="toggleCollapse(i)">
+            {{ experience.isCollapsed ? 'Devamını gör' : 'Daha az göster' }}
+        </a>
+    </div>
+</div>

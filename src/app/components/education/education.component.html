@@ -1,0 +1,14 @@
+<div *ngFor="let education of educationList" class="experience-card">
+    <div class="company-details">
+        <img [src]="education.logo" alt="Logo" />
+        <div>
+            <h2>{{ education.name }}</h2>
+            <p>{{ education.degree }} • {{ education.area }}</p>
+        </div>
+    </div>
+
+    <div class="gpa">
+        <p>{{ education.startDate }} - {{ education.endDate || 'Halen' }}</p>
+        <p>GPA: {{ education.gpa }}</p>
+    </div>
+</div>
