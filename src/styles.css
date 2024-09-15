@@ -10,6 +10,7 @@ body {
   --secondary-color: #f8f9fa;
   --background: linear-gradient(to right, #ffffff, #d9d9d9);
   --background-color: #fff;
+  --header-background: #e5e5e5;
   --text-color: #000;
   --text-secondary-color: #2f2f2f;
   --text-hover-color: #484848;
@@ -26,6 +27,7 @@ body {
   --secondary-color: #f8f9fa;
   --background: linear-gradient(to right, #111111, #1a1a1a);
   --background-color: #111111;
+  --header-background: linear-gradient(to left, #111111, #1a1a1a);
   --text-color: #f5f5f5;
   --text-secondary-color: #b2b2b2;
   --text-hover-color: #cbcbcb;

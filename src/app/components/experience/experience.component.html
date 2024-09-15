@@ -1,4 +1,4 @@
-<div *ngFor="let experience of experienceList" class="experience-card">
+<div *ngFor="let experience of experienceList; let num = index" class="experience-card">
     <div class="company-details">
         <img [src]="experience.companyLogo" alt="Logo" />
         <div>

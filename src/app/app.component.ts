@@ -1,8 +1,8 @@
-import {Component, Inject} from '@angular/core';
+import {Component, HostListener, Inject} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {HeaderComponent} from "./components/header/header.component";
 import {ProfileLayout} from "./layouts/profile-layout/profile.layout";
-import {DOCUMENT, NgIf} from "@angular/common";
+import {DOCUMENT, NgClass, NgIf} from "@angular/common";
 import {ThemeService} from "./core/services/theme.service";
 import {ScrollAnimatorDirective} from "./core/directives/scroll-animator.directive";
 import {ExperienceLayout} from "./layouts/experience-layout/experience.layout";
@@ -18,11 +18,12 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ProfileLayout, NgIf, ScrollAnimatorDirective, ExperienceLayout, ContactLayout, EducationLayout, ProjectsLayout, ScrollTopTopComponent, TranslatePipe],
+  imports: [RouterOutlet, HeaderComponent, ProfileLayout, NgIf, ScrollAnimatorDirective, ExperienceLayout, ContactLayout, EducationLayout, ProjectsLayout, ScrollTopTopComponent, TranslatePipe, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  isHeaderFixedShow: boolean = false;
 
   constructor(
       protected themeService: ThemeService,
@@ -55,6 +56,22 @@ export class AppComponent {
       this.translator.use('en');
     } else {
       this.translator.use('tr');
+    }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.scrollCheck();
+  }
+
+  scrollCheck(): void {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition >= windowHeight / 2) {
+      this.isHeaderFixedShow = true;
+    } else {
+      this.isHeaderFixedShow = false;
     }
   }
 }
