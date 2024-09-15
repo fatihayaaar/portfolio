@@ -1,28 +1,54 @@
 .profile-container {
-  align-items: center;
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: start;
 
-  .fullName {
-    font-family: var(--font), sans-serif;
-    text-align: center;
-    font-size: 39pt;
-    margin-top: 25px;
+  .profile-wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    app-avatar-component {
+      margin-right: 25px;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .fullName {
+      font-family: var(--font), sans-serif;
+      text-align: left;
+      font-size: 33pt;
+      margin: 0;
+    }
+
+    .title {
+      font-family: var(--font), sans-serif;
+      text-align: left;
+      font-size: 15pt;
+      font-weight: 300;
+      line-height: 30px;
+    }
   }
 
-  .title {
+  .description {
+    text-align: left;
     font-family: var(--font), sans-serif;
-    text-align: center;
-    font-size: 15pt;
-    font-weight: 300;
-    line-height: 0;
-    margin: 0 0 20px;
-    padding: 0;
+    color: var(--text-secondary-color);
+    font-size: 11pt;
+    padding: 20px 0;
+    margin-left: 120px;
   }
 
   .cv-download-container {
     text-align: center;
-    margin: auto;
+    margin: 0 0 0 120px;
 
     .row {
       padding: 0;

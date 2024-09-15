@@ -1,18 +1,27 @@
-<div class="profile-container d-flex justify-content-center align-items-center vh-100">
-    <div class="col d-flex flex-column justify-content-between align-items-center">
-        <app-avatar-component [imagePath]="'assets/profile.jpeg'" [width]="'130px'" [height]="'130px'"></app-avatar-component>
-        <h1 class="fullName">{{ fullName }}</h1>
-        <h1 class="title">{{ title }}</h1>
-        <div class="row cv-download-container mt-3">
-            <div class="col">
-                <app-download-component [text]=" 'download_resume' | translate " (click)="downloadFile('fatih-ayar-cv.pdf')"></app-download-component>
+<div class="profile-container">
+    <div class="profile-wrapper">
+        <app-avatar-component
+                [imagePath]="'assets/profile.jpeg'"
+                [width]="'90px'"
+                [height]="'90px'">
+        </app-avatar-component>
+        <div class="profile-info">
+            <h1 class="fullName">{{ fullName }}</h1>
+            <h1 class="title">{{ title }}</h1>
+        </div>
+    </div>
+    <p [innerHTML]="formatDescription(description)" class="description"></p>
+    <div class="row cv-download-container">
+        <div class="col">
+            <app-download-component
+                    [text]=" 'download_resume' | translate "
+                    (click)="downloadFile('fatih-ayar-cv.pdf')">
+            </app-download-component>
+        </div>
+        <div class="col">
+            <div class="show-btn" (click)="showPdf()">
+                <i class="bi bi-eye"></i>
             </div>
-            <div class="col">
-                <div class="show-btn" (click)="showPdf()">
-                    <i class="bi bi-eye"></i>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>

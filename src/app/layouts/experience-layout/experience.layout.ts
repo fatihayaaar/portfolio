@@ -1,12 +1,13 @@
 import {Component} from "@angular/core";
 import {ExperienceComponent} from "../../components/experience/experience.component";
+import {TranslatePipe} from "../../core/pipe/translate.pipe";
 
 @Component({
     selector: 'app-experience-layout',
     templateUrl: 'experience.layout.html',
     styleUrls: ['experience.layout.scss'],
     standalone: true,
-    imports: [ExperienceComponent]
+    imports: [ExperienceComponent, TranslatePipe]
 })
 export class ExperienceLayout {
     experienceList = [{
@@ -16,7 +17,7 @@ export class ExperienceLayout {
         location: 'İstanbul, Türkiye',
         duration: '7 Ay',
         positions: [{
-            title: 'Software Development',
+            title: 'Software Development Long-term Intern',
             type: 'Intern',
             startDate: 'Şubat 2024',
             endDate: 'Ağustos 2024',
@@ -34,14 +35,14 @@ export class ExperienceLayout {
         duration: '11 Ay',
         isCollapsed: true,
         positions: [{
-            title: 'Game Programmer',
+            title: 'Game Programmer Intern',
             type: 'Intern',
             startDate: 'Şubat 2020',
             endDate: 'Mayıs 2020',
             description: '• Mobile game developments on 3D game engine written in C++\n' +
                 '• Bug detection in the game written in Java',
         }, {
-            title: 'Game Programmer',
+            title: 'Game Programmer Long-term Intern',
             type: 'Intern',
             startDate: 'Aralık 2016',
             endDate: 'Haziran 2017',

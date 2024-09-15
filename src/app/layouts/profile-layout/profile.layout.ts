@@ -13,6 +13,7 @@ import {TranslatePipe} from "../../core/pipe/translate.pipe";
 export class ProfileLayout {
     @Input() fullName: String | undefined;
     @Input() title: String | undefined;
+    @Input() description: string = "";
     @Output() showPdfOnClick = new EventEmitter();
 
     showPdf() {
@@ -24,5 +25,9 @@ export class ProfileLayout {
         link.href = `assets/${fileName}`;
         link.download = fileName;
         link.click();
+    }
+
+    formatDescription(description: string): string {
+        return description.replace(/\n/g, '<br>');
     }
 }

@@ -3,6 +3,7 @@
     <app-profile-layout
             [fullName]="'Fatih Ayar'"
             [title]="'computer_engineer' | translate"
+            [description]="'description' | translate"
             (showPdfOnClick)="openPdfViewer()">
     </app-profile-layout>
 </div>
@@ -34,5 +35,4 @@
 } @else {
   <i class="bi bi-moon fixed-button" (click)="onClickTheme()"></i>
 }
-
 <i class="bi bi-translate fixed-language-button" (click)="switchLanguage()"></i>

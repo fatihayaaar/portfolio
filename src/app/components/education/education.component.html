@@ -9,6 +9,6 @@
 
     <div class="gpa">
         <p>{{ education.startDate }} - {{ education.endDate || 'Halen' }}</p>
-        <p>GPA: {{ education.gpa }}</p>
+        <p *ngIf="education.gpa != null">GPA: {{ education.gpa }}</p>
     </div>
 </div>
