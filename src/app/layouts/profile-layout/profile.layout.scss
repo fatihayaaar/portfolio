@@ -70,21 +70,19 @@
       font-family: var(--font), sans-serif;
       margin: 25px 0;
       font-size: 18pt;
-      color: var(--button-text-color);
+      color: var(--text-color);
       border: solid 2px var(--primary-color);
-      border-radius: 10px;
-      background-color: var(--button-bg-color);
-      padding: 0 15px;
+      background-color: transparent;
       line-height: 45px;
       height: 45px;
+      width: 45px;
       cursor: pointer;
       text-align: center;
       transition: background-color 0.5s ease, color 0.5s ease;
-      width: auto;
       display: inline-block;
 
       &:hover {
-        background-color: var(--button-bg-hover-color);
+
       }
     }
   }

@@ -42,7 +42,6 @@ export class AppComponent {
     dialogConfig.data = { url: pdfUrl };
     dialogConfig.enterAnimationDuration = '0ms';
     dialogConfig.exitAnimationDuration = '0ms';
-    dialogConfig.hasBackdrop = false;
 
     this.dialog.open(PdfViewerComponent, dialogConfig);
   }
