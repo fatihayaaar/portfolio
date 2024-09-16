@@ -1,63 +1,69 @@
 .profile-container {
-  width: 70%;
-  margin: auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  height: calc(100vh - 70px);
   justify-content: center;
-  align-items: start;
-  padding: 30px 0;
+  border-radius: 10px 10px 0 0;
+  margin: 70px auto auto;
+  align-content: center;
 
   .profile-wrapper {
-    display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+
+    .image-loaded {
+      opacity: 1;
+    }
 
     app-avatar-component {
-      margin-right: 25px;
     }
 
     .profile-info {
+      justify-content: left;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: start;
     }
 
     .fullName {
       font-family: var(--font), sans-serif;
       text-align: left;
-      font-size: 33pt;
-      margin: 0;
+      font-size: 3.2rem;
+      margin: 30px 0 0;
     }
 
     .title {
       font-family: var(--font), sans-serif;
       text-align: left;
-      font-size: 15pt;
+      font-size: 3rem;
       font-weight: 300;
-      line-height: 30px;
     }
   }
 
   .description {
-    text-align: left;
     font-family: var(--font), sans-serif;
     color: var(--text-secondary-color);
+    text-align: left;
     font-size: 11pt;
-    padding: 20px 0;
-    margin-left: 120px;
+    padding: 20px 20% 20px 0;
   }
 
   .cv-download-container {
-    text-align: center;
-    margin: 0 0 0 120px;
+    text-align: left;
+    justify-content: start;
 
     .row {
       padding: 0;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
     }
 
     .col {
       padding: 5px;
+      width: auto;
+      flex: none;
     }
 
     .show-btn {
@@ -74,10 +80,17 @@
       cursor: pointer;
       text-align: center;
       transition: background-color 0.5s ease, color 0.5s ease;
+      width: auto;
+      display: inline-block;
 
       &:hover {
         background-color: var(--button-bg-hover-color);
       }
     }
   }
+}
+
+app-avatar-component {
+  display: block;
+  margin: 0 auto;
 }

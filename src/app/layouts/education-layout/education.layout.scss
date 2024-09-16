@@ -1,7 +1,6 @@
 .education-container {
-  width: 70%;
+  width: 80%;
   margin: auto;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +10,6 @@
   h1 {
     font-family: var(--font), sans-serif;
     font-size: 25pt;
-    padding: 0 20px 1px;
+    padding: 20px 20px 1px;
   }
 }

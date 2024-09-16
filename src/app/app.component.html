@@ -1,8 +1,10 @@
 <div class="header-fixed" [ngClass]="{'header-fixed-active': isHeaderFixedShow}">
     <app-header-component></app-header-component>
 </div>
-<div class="section" id="section1">
-    <app-header-component></app-header-component>
+<div class="section">
+    <div class="header-container"  id="section1">
+        <app-header-component *ngIf="!isHeaderFixedShow"></app-header-component>
+    </div>
     <app-profile-layout
             [fullName]="'Fatih Ayar'"
             [title]="'computer_engineer' | translate"
@@ -10,25 +12,18 @@
             (showPdfOnClick)="openPdfViewer()">
     </app-profile-layout>
 </div>
-<div class="section" id="section3">
-    <div class="animated-element" appScrollAnimator>
-        <app-projects-layout></app-projects-layout>
-    </div>
+<div class="section section-projects" id="section3">
+    <app-projects-layout></app-projects-layout>
 </div>
-<div class="section" id="section4">
-    <div class="animated-element" appScrollAnimator>
-        <app-experience-layout></app-experience-layout>
-    </div>
+<div class="section">
+    <app-experience-layout></app-experience-layout>
 </div>
-<div class="section" id="section5">
-    <div class="animated-element" appScrollAnimator>
-        <app-education-layout></app-education-layout>
-    </div>
+<div class="section">
+    <app-education-layout></app-education-layout>
 </div>
-<div class="section" id="section6">
-    <div class="animated-element" appScrollAnimator>
-        <app-contact-layout></app-contact-layout>
-    </div>
+<div class="section">
+    <app-contact-layout></app-contact-layout>
+    <app-footer-component></app-footer-component>
 </div>
 
 <app-scroll-to-top-component></app-scroll-to-top-component>

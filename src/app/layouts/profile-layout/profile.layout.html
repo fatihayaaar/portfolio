@@ -2,12 +2,12 @@
     <div class="profile-wrapper">
         <app-avatar-component
                 [imagePath]="'assets/profile.jpeg'"
-                [width]="'90px'"
-                [height]="'90px'">
+                [width]="'150px'"
+                [height]="'150px'">
         </app-avatar-component>
         <div class="profile-info">
-            <h1 class="fullName">{{ fullName }}</h1>
-            <h1 class="title">{{ title }}</h1>
+            <h1 class="fullName">Hello, I'm {{ fullName }}.</h1>
+            <h1 class="title">I'm a {{ title }}.</h1>
         </div>
     </div>
     <p [innerHTML]="formatDescription(description)" class="description"></p>

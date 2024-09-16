@@ -5,6 +5,8 @@
   "profile": "Profile",
   "projects": "Projects",
   "contact": "Contact",
+  "home": "Home",
+  "copyright": "© 2024 All Rights Reserved.",
   "download_resume": "Download Resume",
-  "description" : "Hello, I’m Fatih Ayar.\n\nI embarked on my journey in the software world at the age of 15, and since then, I have continuously developed myself, building a strong career in technology. I started by developing native mobile applications using Java and later moved on to creating cross-platform solutions with Flutter. With Java Spring, I gained deep expertise in both monolithic and microservice architectures, specializing in back-end development.\n\nIn these projects, I focused on delivering user-friendly experiences by building web interfaces with Angular. I see following new technologies and continuous learning as integral parts of my life. I actively apply my software development skills in both my professional work and personal projects, always aiming for innovation and improvement. Education is a passion of mine; I am committed to pushing myself further and continuously advancing in this ever-evolving field."
+  "description" : "Throughout my career, I have focused on creating innovative solutions and made continuous learning a core principle. In the projects I developed, I prioritized both user experience and technical excellence. Working with various architectures and technologies has given me a broad range of expertise. I am always open to new technologies and opportunities, approaching every challenge with a solution-oriented mindset."
 }

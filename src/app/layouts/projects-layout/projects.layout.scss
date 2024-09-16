@@ -1,5 +1,14 @@
 .projects-container {
-  align-items: center;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: start;
+
+  .gif-container {
+    width: 100%;
+    background-color: var(--background-color);
+    height: 720px;
+  }
 }

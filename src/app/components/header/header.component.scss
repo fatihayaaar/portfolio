@@ -1,15 +1,23 @@
-.nav-item {
-  user-select: none;
-  margin: 10px 10px;
+.navbar {
+  width: calc(100% - 20%);
+  height: 70px;
+  margin: 0 10%;
 
-  .nav-link {
-    font-family: var(--font), sans-serif;
-    font-size: 12pt;
-    color: var(--text-color);
-    cursor: pointer;
+  .nav-item {
+    user-select: none;
+    line-height: 50px;
+    margin: 0 10px;
+    padding: 0;
 
-    &:hover {
-      color: var(--text-hover-color);
+    .nav-link {
+      font-family: var(--font), sans-serif;
+      font-size: 12pt;
+      color: var(--text-color);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--text-hover-color);
+      }
     }
   }
 }

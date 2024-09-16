@@ -4,7 +4,6 @@ import {HeaderComponent} from "./components/header/header.component";
 import {ProfileLayout} from "./layouts/profile-layout/profile.layout";
 import {DOCUMENT, NgClass, NgIf} from "@angular/common";
 import {ThemeService} from "./core/services/theme.service";
-import {ScrollAnimatorDirective} from "./core/directives/scroll-animator.directive";
 import {ExperienceLayout} from "./layouts/experience-layout/experience.layout";
 import {ContactLayout} from "./layouts/contact-layout/contact.layout";
 import {EducationLayout} from "./layouts/education-layout/education.layout";
@@ -14,11 +13,12 @@ import {TranslatePipe} from "./core/pipe/translate.pipe";
 import {TranslateService} from "./core/services/translate.service";
 import {PdfViewerComponent} from "./components/pdf-viewer/pdf-viewer.component";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {FooterComponent} from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ProfileLayout, NgIf, ScrollAnimatorDirective, ExperienceLayout, ContactLayout, EducationLayout, ProjectsLayout, ScrollTopTopComponent, TranslatePipe, NgClass],
+  imports: [RouterOutlet, HeaderComponent, ProfileLayout, NgIf, ExperienceLayout, ContactLayout, EducationLayout, ProjectsLayout, ScrollTopTopComponent, TranslatePipe, NgClass, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -68,10 +68,6 @@ export class AppComponent {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     const windowHeight = window.innerHeight;
 
-    if (scrollPosition >= windowHeight / 2) {
-      this.isHeaderFixedShow = true;
-    } else {
-      this.isHeaderFixedShow = false;
-    }
+    this.isHeaderFixedShow = scrollPosition >= windowHeight / 2;
   }
 }

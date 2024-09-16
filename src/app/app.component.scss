@@ -1,12 +1,12 @@
 .header-fixed {
   background: var(--header-background);
   position: fixed;
-  left: 50%;
+  right: 0;
+  left: 0;
   top: -200px;
-  transform: translateX(-50%);
   z-index: 999;
-  width: 100%;
   transition: top 0.5s ease-in-out;
+  box-shadow: 5px 5px 15px var(--shadow-color);
 
   &.header-fixed-active {
     top: 0;
@@ -14,20 +14,24 @@
 }
 
 .section {
-  height: 100vh;
   color: var(--text-color);
   background: var(--background);
   transition: background 0.5s ease, color 0.5s ease;
 
-  app-header-component {
+  .header-container {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
+    left: 0;
+    top: 0;
     z-index: 100;
   }
 
   app-profile-layout {
     animation: fadeIn 1s ease-out forwards;
+  }
+
+  &.section-projects {
+    padding-top: 0;
   }
 }
 
@@ -59,28 +63,6 @@
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 body.loaded .component {
   animation-delay: 0.2s;
-}
-
-.animated-element {
-  opacity: 0;
-  transform: translateY(150px);
-  transition: all 0.5s ease-out;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

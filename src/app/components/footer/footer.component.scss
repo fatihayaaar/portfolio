@@ -1,0 +1,16 @@
+.footer-container {
+  margin: 20px 10%;
+  padding-bottom: 100px;
+  padding-top: 20px;
+
+  hr {
+    color: var(--text-secondary-color);
+    opacity: 0.2;
+  }
+
+  p {
+    font-family: var(--font);
+    font-size: 0.8rem;
+    color: var(--text-secondary-color)
+  }
+}
