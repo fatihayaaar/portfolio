@@ -18,7 +18,6 @@ export class ExperienceLayout {
         duration: '7 Ay',
         positions: [{
             title: 'Software Development Long-term Intern',
-            type: 'Intern',
             startDate: 'Şubat 2024',
             endDate: 'Ağustos 2024',
             description: '• GPT application interface development with Angular\n' +
@@ -36,7 +35,6 @@ export class ExperienceLayout {
         isCollapsed: true,
         positions: [{
             title: 'Game Programmer Intern',
-            type: 'Intern',
             startDate: 'Şubat 2020',
             endDate: 'Mayıs 2020',
             description: '• Mobile game developments on 3D game engine written in C++\n' +

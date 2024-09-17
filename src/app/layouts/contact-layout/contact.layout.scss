@@ -7,7 +7,7 @@
   align-items: start;
 
   h1 {
-    font-family: var(--font), sans-serif;
+    font-family: var(--font-title);
     font-size: 25pt;
     padding: 20px 20px 1px 0;
   }
@@ -15,7 +15,7 @@
   .content {
     margin: 20px 20px 20px 0;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 
     p {
       font-family: var(--font), sans-serif;
@@ -45,8 +45,7 @@
       font-size: 11pt;
       font-weight: 400;
       color: var(--text-secondary-color);
-      background-color: rgba(128, 128, 128, 0.14);
-      padding: 2px 5px;
+      border-radius: 5px;
       cursor: pointer;
     }
   }
