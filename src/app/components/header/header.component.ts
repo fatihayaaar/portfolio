@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {TranslatePipe} from "../../core/pipe/translate.pipe";
 import {TranslateService} from "../../core/services/translate.service";
-import {NgIf} from "@angular/common";
+import {NgClass, NgIf} from "@angular/common";
 
 @Component({
     selector: "app-header-component",
@@ -10,13 +10,19 @@ import {NgIf} from "@angular/common";
     standalone: true,
     imports: [
         TranslatePipe,
-        NgIf
+        NgIf,
+        NgClass
     ]
 })
 export class HeaderComponent {
     language: string = "en";
+    isMenuOpen = false;
 
     constructor(private translator: TranslateService) {
+    }
+
+    toggleMenu() {
+        this.isMenuOpen = !this.isMenuOpen;
     }
 
     switchLanguage() {

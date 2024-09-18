@@ -1,6 +1,9 @@
 <div class="navbar navbar-expand-lg">
     <div class="custom-container">
-        <ul class="navbar-nav">
+        <div class="menu-toggle" (click)="toggleMenu()">
+            <i class="bi bi-list"></i>
+        </div>
+        <ul class="navbar-nav" [ngClass]="{'open': isMenuOpen}">
             <li class="nav-item">
                 <a class="nav-link" href="#section1">{{ 'home' | translate }}</a>
             </li>
@@ -16,10 +19,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="#section6">{{ 'contact' | translate }}</a>
             </li>
+            <li class="nav-item language-container" (click)="switchLanguage()">
+                <p *ngIf="language=='en'">TR</p>
+                <p *ngIf="language=='tr'">EN</p>
+            </li>
         </ul>
-        <div class="language-container" (click)="switchLanguage()">
-            <p *ngIf="language=='en'">TR</p>
-            <p *ngIf="language=='tr'">EN</p>
-        </div>
     </div>
 </div>

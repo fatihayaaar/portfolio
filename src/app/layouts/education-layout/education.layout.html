@@ -2,14 +2,14 @@
     <div class="education-container" id="section5">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-5">
+                <div class="col-md-12 col-lg-5">
                     <h1>{{ 'My Education' | translate }}</h1>
                     <p>Throughout my education, I had the opportunity to work with various technologies and developed numerous small projects during this time.</p>
                     <app-custom-button-component [text]="'Incele'"></app-custom-button-component>
                 </div>
-                <div class="col-1">
+                <div class="d-none d-md-block col-md-12 col-lg-1">
                 </div>
-                <div class="col-6">
+                <div class="col-md-12 col-lg-6">
                     <app-education [educationList]="educationList"></app-education>
                 </div>
             </div>

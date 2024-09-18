@@ -80,7 +80,7 @@
       cursor: pointer;
       text-align: center;
       transition: background-color 0.5s ease, color 0.5s ease;
-      display: inline-block;
+
 
       &:hover {
         background-color: var(--button-bg-secondary-hover-color);
@@ -92,4 +92,10 @@
 app-avatar-component {
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .show-btn {
+    display: none;
+  }
 }
