@@ -21,32 +21,29 @@ export class ExperienceLayout {
             title: 'Software Development Long-term Intern',
             startDate: 'Sub 2024',
             endDate: 'Agu 2024',
-            description: '• GPT application interface development with Angular\n' +
-                '• API improvements for use in on-premises applications with Java Spring\n' +
-                '• Fix datasets for AI models\n' +
-                '• Conducting performance tests for the STT system\n' +
-                '• Literature research\n' +
-                '• Making screen designs with Angular',
-        }]
+        }],
     }, {
         companyName: 'Gamelab Istanbul',
         companyLogo: 'assets/logo/gamelab-istanbul.jpeg',
         location: 'İstanbul, Türkiye',
-        duration: '11 Ay',
+        duration: '3 Ay',
         isCollapsed: true,
         positions: [{
             title: 'Game Programmer Intern',
             startDate: 'Sub 2020',
             endDate: 'May 2020',
-            description: '• Mobile game developments on 3D game engine written in C++\n' +
-                '• Bug detection in the game written in Java',
-        }, {
+        }]
+    }, {
+        companyName: 'Gamelab Istanbul',
+        companyLogo: 'assets/logo/gamelab-istanbul.jpeg',
+        location: 'İstanbul, Türkiye',
+        duration: '7 Ay',
+        isCollapsed: true,
+        positions: [{
             title: 'Game Programmer Long-term Intern',
             type: 'Intern',
             startDate: 'Ara 2016',
             endDate: 'Haz 2017',
-            description: '• Mobile game developments in 2D game engine written in Java\n' +
-                '• Creating game graphics with Photoshop\n',
         }]
     }];
 }

@@ -73,15 +73,15 @@
         padding: 0;
         position: relative;
       }
+    }
 
-      p {
-        font-size: 1vw;
-        line-height: 1.1vw;
-        margin: 0 0 0 auto;
-        color: var(--text-secondary-color);
-        padding: 0;
-        position: relative;
-      }
+    p {
+      font-size: 1vw;
+      margin-top: 0.6vh;
+      line-height: 1.5vw;
+      color: var(--text-secondary-color);
+      padding: 0;
+      position: relative;
     }
   }
 
