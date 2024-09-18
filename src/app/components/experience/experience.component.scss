@@ -5,7 +5,6 @@
 
   .company-details {
     display: flex;
-    align-items: center;
 
     img {
       width: 8vh;
@@ -16,9 +15,9 @@
 
     h2 {
       font-family: var(--font), sans-serif;
-      margin: 0;
-      font-size: 1.5vw;
-      line-height: 2vw;
+      font-size: 1.3vw;
+      margin: 0.5vh 0 0.5vh;
+      line-height: 1.3vw;
     }
 
     p {
@@ -35,7 +34,7 @@
     p {
       font-family: var(--font), sans-serif;
       margin: 1vw 0;
-      font-size: 1vw;
+      font-size: 0.8vw;
       color: var(--text-secondary-color);
     }
 
@@ -76,7 +75,7 @@
     }
 
     p {
-      font-size: 1vw;
+      font-size: 0.9vw;
       margin-top: 0.6vh;
       line-height: 1.5vw;
       color: var(--text-secondary-color);

@@ -16,7 +16,6 @@ export class EducationLayout {
         logo: 'assets/logo/namik-kemal-university.jpeg',
         area: 'Computer Engineering',
         degree: 'Bachelor’s Degree',
-        gpa: '3.41 / 4',
         startDate: 'Ekim 2020',
         endDate: 'Ağustos 2024',
     }, {
@@ -24,7 +23,6 @@ export class EducationLayout {
         logo: 'assets/logo/beykent-university.jpeg',
         area: 'Computer Programming',
         degree: 'Associate’s Degree',
-        gpa: '3.7 / 4',
         startDate: 'Ekim 2018',
         endDate: 'Haziran 2020',
     }, {
@@ -32,7 +30,6 @@ export class EducationLayout {
         logo: 'assets/logo/meb-logo.png',
         area: 'Web technologies',
         degree: "Information technologies",
-        gpa: null,
         startDate: 'Eylül 2014',
         endDate: 'Haziran 2017',
     }];
