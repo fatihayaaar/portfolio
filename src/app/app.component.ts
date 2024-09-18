@@ -28,7 +28,6 @@ export class AppComponent {
   constructor(
       protected themeService: ThemeService,
       @Inject(DOCUMENT) protected document: Document,
-      private translator: TranslateService,
       private dialog: MatDialog,
   ) {
     document.body.setAttribute('data-theme', themeService.getIsDarkTheme() ? "dark" : "light");
@@ -48,14 +47,6 @@ export class AppComponent {
 
   onClickTheme() {
     this.themeService.toggleTheme();
-  }
-
-  switchLanguage() {
-    if (this.translator.getCurrentLanguage() == "tr") {
-      this.translator.use('en');
-    } else {
-      this.translator.use('tr');
-    }
   }
 
   @HostListener('window:scroll', [])

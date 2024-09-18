@@ -1,15 +1,20 @@
 .contact-container {
   width: 80%;
+  height: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
 
   h1 {
     font-family: var(--font-title);
     font-size: 25pt;
     padding: 20px 20px 1px 0;
+  }
+
+  .footer-container {
+    width: 100%;
   }
 
   .content {

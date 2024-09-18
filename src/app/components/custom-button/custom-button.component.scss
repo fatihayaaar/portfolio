@@ -1,7 +1,8 @@
-.download-button {
-  font-family: var(--font), sans-serif;
+.custom-button {
+  font-family: var(--font-title);
   margin: 2.8vh 0;
-  font-size: 1vw;
+  font-size: 1.1vw;
+  border-radius: 0;
   color: var(--button-text-color);
   border: solid 2px var(--primary-color);
   background-color: var(--button-bg-color);
@@ -9,13 +10,9 @@
   height: 5.6vh;
   line-height: 5.2vh;
   cursor: pointer;
-  min-width: 17vw;
+  max-width: 15vw;
   text-align: center;
   transition: background-color 0.5s ease, color 0.5s ease;
-
-  i {
-    margin-right: 10px;
-  }
 
   &:hover {
     background-color: var(--button-bg-hover-color);

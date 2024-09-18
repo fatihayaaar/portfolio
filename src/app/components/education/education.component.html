@@ -11,4 +11,5 @@
         <p>{{ education.startDate }} - {{ education.endDate || 'Halen' }}</p>
         <p *ngIf="education.gpa != null">GPA: {{ education.gpa }}</p>
     </div>
+    <hr *ngIf="num != educationList.length - 1">
 </div>

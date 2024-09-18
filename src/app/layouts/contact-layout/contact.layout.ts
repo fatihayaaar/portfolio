@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {TranslatePipe} from "../../core/pipe/translate.pipe";
+import {FooterComponent} from "../../components/footer/footer.component";
 
 @Component({
     selector: 'app-contact-layout',
@@ -7,7 +8,8 @@ import {TranslatePipe} from "../../core/pipe/translate.pipe";
     styleUrls: ['contact.layout.scss'],
     standalone: true,
     imports: [
-        TranslatePipe
+        TranslatePipe,
+        FooterComponent
     ]
 })
 export class ContactLayout {

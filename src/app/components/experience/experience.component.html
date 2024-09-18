@@ -8,8 +8,10 @@
     </div>
 
     <div *ngFor="let position of experience.positions; let i = index" class="position-details">
-        <h3>{{ position.title }}</h3>
-        <p>{{ position.startDate }} - {{ position.endDate || 'Halen' }}</p>
+        <div class="position-details-title">
+            <h3>{{ position.title }}</h3>
+            <p>{{ position.startDate }} - {{ position.endDate || 'Halen' }}</p>
+        </div>
         <p [innerHTML]="formatDescription(position.description)" class="description" [class.collapsed]="experience.isCollapsed">
         </p>
         <a *ngIf="position.description.length > 200" (click)="toggleCollapse(i)">

@@ -37,25 +37,16 @@
   &.bg-color-education {
     background-color: var(--background-secondary-color);
   }
+
+  &.experience-container {
+    height: 100vh;
+    justify-content: center;
+  }
 }
 
 .fixed-button {
   position: fixed;
   left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px 20px;
-  cursor: pointer;
-  color: var(--text-color);
-  font-size: 25pt;
-
-  &:hover {
-  }
-}
-
-.fixed-language-button {
-  position: fixed;
-  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   padding: 10px 20px;

@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-lg">
-    <div class="container justify-content-end">
+    <div class="custom-container">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#section1">{{ 'home' | translate }}</a>
@@ -17,5 +17,9 @@
                 <a class="nav-link" href="#section6">{{ 'contact' | translate }}</a>
             </li>
         </ul>
+        <div class="language-container" (click)="switchLanguage()">
+            <p *ngIf="language=='en'">TR</p>
+            <p *ngIf="language=='tr'">EN</p>
+        </div>
     </div>
 </div>

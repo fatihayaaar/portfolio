@@ -1,6 +1,16 @@
-<div class="experience-container">
-    <div id="section4" style="height: 70px"></div>
-    <h1>{{ 'experience' | translate }}</h1>
-
-    <app-experience [experienceList]="experienceList"></app-experience>
+<div class="custom-container">
+    <div class="experience-container" id="section4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5">
+                    <h1>{{ 'My Experience' | translate }}</h1>
+                    <p>I developed robust backend applications with Java, working on Spring Framework and microservices. I also built user-friendly interfaces with Angular, managing full-stack projects.</p>
+                    <app-custom-button-component [text]="'Incele'"></app-custom-button-component>
+                </div>
+                <div class="col-7">
+                    <app-experience [experienceList]="experienceList"></app-experience>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -19,17 +19,15 @@
     <div class="cube"></div>
     <div class="cube"></div>
 </div>
-<div class="section">
+<div class="section experience-container bg-color-education">
     <app-experience-layout></app-experience-layout>
+
 </div>
-<div class="section bg-color-education"  style="height: calc(100vh - 70px)">
-    <div id="section5" style="height: 70px; background-color: var(--background-color); width: 100%"></div>
+<div class="section bg-color-education" style="height: 100vh">
     <app-education-layout></app-education-layout>
 </div>
-<div class="section">
-    <div id="section6" style="height: 70px; background-color: var(--background-secondary-color); width: 100%"></div>
+<div class="section" style="height: 100vh">
     <app-contact-layout></app-contact-layout>
-    <app-footer-component></app-footer-component>
 </div>
 
 <app-scroll-to-top-component></app-scroll-to-top-component>
@@ -39,4 +37,3 @@
 } @else {
   <i class="bi bi-moon fixed-button" (click)="onClickTheme()"></i>
 }
-<i class="bi bi-translate fixed-language-button" (click)="switchLanguage()"></i>

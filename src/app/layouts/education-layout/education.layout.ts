@@ -1,13 +1,14 @@
 import {Component} from "@angular/core";
 import {EducationComponent} from "../../components/education/education.component";
 import {TranslatePipe} from "../../core/pipe/translate.pipe";
+import {CustomButtonComponent} from "../../components/custom-button/custom-button.component";
 
 @Component({
     selector: 'app-education-layout',
     templateUrl: 'education.layout.html',
     styleUrls: ['education.layout.scss'],
     standalone: true,
-    imports: [EducationComponent, TranslatePipe]
+    imports: [EducationComponent, TranslatePipe, CustomButtonComponent]
 })
 export class EducationLayout {
     educationList = [{
