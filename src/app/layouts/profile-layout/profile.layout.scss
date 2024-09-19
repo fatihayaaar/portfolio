@@ -3,10 +3,11 @@
     width: 100%;
     text-align: center;
     height: calc(100vh);
-    justify-content: center;
+    justify-content: end;
     margin: 0;
-    padding: 0;
-    align-content: center;
+    padding: 100px 0 0;
+    align-content: start;
+    position: relative;
 
     .profile-wrapper {
       flex-direction: column;
@@ -52,6 +53,10 @@
     .cv-download-container {
       text-align: center;
       justify-content: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
 
       .row {
         padding: 0;
@@ -72,7 +77,6 @@
     }
   }
 }
-
 @media (min-width: 1025px) {
   .profile-container {
     width: 80%;

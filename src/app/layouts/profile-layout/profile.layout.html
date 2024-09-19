@@ -2,7 +2,7 @@
     <div class="profile-wrapper">
         <app-avatar-component [imagePath]="'assets/profile.jpeg'"></app-avatar-component>
         <div class="profile-info">
-            <h1 class="fullName">Hello, I'm {{ fullName }}.</h1>
+            <h1 class="fullName">{{ 'Hello' | translate}},<br *ngIf="screenWidth <= 1024" /> I'm {{ fullName }}.</h1>
             <h1 class="title">I'm a {{ title }}.</h1>
         </div>
     </div>
