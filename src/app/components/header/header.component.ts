@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {TranslatePipe} from "../../core/pipe/translate.pipe";
 import {TranslateService} from "../../core/services/translate.service";
 import {NgClass, NgIf} from "@angular/common";
+import {ThemeService} from "../../core/services/theme.service";
 
 @Component({
     selector: "app-header-component",
@@ -18,7 +19,7 @@ export class HeaderComponent {
     language: string = "en";
     isMenuOpen = false;
 
-    constructor(private translator: TranslateService) {
+    constructor(private translator: TranslateService, protected themeService: ThemeService) {
     }
 
     toggleMenu() {
@@ -38,5 +39,9 @@ export class HeaderComponent {
             this.language = "tr";
             this.translator.use('tr');
         }
+    }
+
+    onClickTheme() {
+        this.themeService.toggleTheme();
     }
 }

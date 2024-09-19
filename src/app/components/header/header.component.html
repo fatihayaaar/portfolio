@@ -19,9 +19,18 @@
             <li class="nav-item"  (click)="toggleMenu()">
                 <a class="nav-link" href="#section6">{{ 'contact' | translate }}</a>
             </li>
-            <li class="nav-item language-container" (click)="switchLanguage()" >
-                <p *ngIf="language=='en'">TR</p>
-                <p *ngIf="language=='tr'">EN</p>
+            <li class="nav-item" (click)="switchLanguage()">
+                <div class="language-container">
+                    <p *ngIf="language=='en'">TR</p>
+                    <p *ngIf="language=='tr'">EN</p>
+                </div>
+            </li>
+            <li class="nav-item theme-button" (click)="onClickTheme()">
+                @if (themeService.getIsDarkTheme()) {
+                    <i class="bi bi-brightness-high"></i> Light
+                } @else {
+                    <i class="bi bi-moon"></i> Dark
+                }
             </li>
         </ul>
     </div>
