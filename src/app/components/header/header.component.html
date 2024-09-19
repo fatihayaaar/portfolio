@@ -4,22 +4,22 @@
             <i class="bi bi-list"></i>
         </div>
         <ul class="navbar-nav" [ngClass]="{'open': isMenuOpen}">
-            <li class="nav-item">
+            <li class="nav-item"  (click)="toggleMenu()">
                 <a class="nav-link" href="#section1">{{ 'home' | translate }}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"  (click)="toggleMenu()">
                 <a class="nav-link" href="#section3">{{ 'projects' | translate }}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"  (click)="toggleMenu()">
                 <a class="nav-link" href="#section4">{{ 'experience' | translate }}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"  (click)="toggleMenu()">
                 <a class="nav-link" href="#section5">{{ 'education' | translate }}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"  (click)="toggleMenu()">
                 <a class="nav-link" href="#section6">{{ 'contact' | translate }}</a>
             </li>
-            <li class="nav-item language-container" (click)="switchLanguage()">
+            <li class="nav-item language-container" (click)="switchLanguage()" >
                 <p *ngIf="language=='en'">TR</p>
                 <p *ngIf="language=='tr'">EN</p>
             </li>

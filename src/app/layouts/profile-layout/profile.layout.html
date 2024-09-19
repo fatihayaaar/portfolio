@@ -2,8 +2,10 @@
     <div class="profile-wrapper">
         <app-avatar-component [imagePath]="'assets/profile.jpeg'"></app-avatar-component>
         <div class="profile-info">
-            <h1 class="fullName">{{ 'Hello' | translate}},<br *ngIf="screenWidth <= 1024" /> I'm {{ fullName }}.</h1>
-            <h1 class="title">I'm a {{ title }}.</h1>
+            <h1 class="fullName" *ngIf="screenWidth > 1024">{{ 'Hello' | translate}}, I'm {{ fullName }}.</h1>
+            <h1 class="fullName" *ngIf="screenWidth <= 1024">{{ fullName }}</h1>
+            <h1 class="title" *ngIf="screenWidth > 1024">I'm a {{ title }}.</h1>
+            <h1 class="title" *ngIf="screenWidth <= 1024">{{ title }}</h1>
         </div>
     </div>
     <div class="row cv-download-container">
@@ -19,8 +21,8 @@
             </div>
         </div>
     </div>
-    <div class="bottom-button-container" *ngIf="screenWidth <= 1024">
+    <a class="bottom-button-container" href="#section3" *ngIf="screenWidth <= 1024">
         <p>Kaydır</p>
         <i class="bi bi-chevron-compact-down"></i>
-    </div>
+    </a>
 </div>

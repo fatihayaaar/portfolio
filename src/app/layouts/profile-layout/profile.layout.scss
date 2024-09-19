@@ -35,7 +35,7 @@
       .fullName {
         font-family: var(--font-title);
         text-align: center;
-        font-size: 29pt;
+        font-size: 33pt;
         line-height: 45px;
         margin: 5vh 0 0;
       }
@@ -80,6 +80,7 @@
       left: 0;
       right: 0;
       animation: bounce 1.5s ease-in-out infinite;
+      text-decoration: none;
 
       p {
         font-family: var(--font);
