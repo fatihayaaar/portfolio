@@ -42,22 +42,19 @@
 
       .title {
         font-family: var(--font-title);
-        margin-top: 5vh;
+        margin-top: 1vh;
         text-align: center;
-        font-size: 29pt;
+        font-size: 18pt;
         font-weight: 300;
-        line-height: 45px;
+        line-height: 30px;
       }
     }
 
     .cv-download-container {
       text-align: center;
       justify-content: center;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding-bottom: env(safe-area-inset-bottom);
+      margin: 0;
+      padding: 0;
 
       .row {
         padding: 0;
@@ -74,6 +71,27 @@
 
       .show-btn {
         display: none;
+      }
+    }
+
+    .bottom-button-container {
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      right: 0;
+      animation: bounce 1.5s ease-in-out infinite;
+
+      p {
+        font-family: var(--font);
+        font-size: 12pt;
+        color: var(--text-secondary-color);
+        line-height: 10px;
+      }
+
+      i {
+        line-height: 10px;
+        font-size: 30pt;
+        color: var(--text-secondary-color);
       }
     }
   }
@@ -162,5 +180,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
