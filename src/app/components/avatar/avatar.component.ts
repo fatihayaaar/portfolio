@@ -13,8 +13,6 @@ import {NgIf, NgStyle} from "@angular/common";
 })
 export class AvatarComponent {
   @Input() imagePath: string = '';
-  @Input() width: string = '100px';
-  @Input() height: string = '100px';
 
   get hasImage(): boolean {
     return !!this.imagePath && this.imagePath.trim() !== '';
