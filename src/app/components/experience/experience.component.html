@@ -13,4 +13,5 @@
         </div>
         <p>{{ position.startDate }} - {{ position.endDate || 'Halen' }}</p>
     </div>
+    <hr *ngIf="num < experienceList.length - 1 && screenWidth <= 1024" />
 </div>

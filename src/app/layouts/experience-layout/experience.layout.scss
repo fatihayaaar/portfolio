@@ -1,7 +1,6 @@
 .custom-container {
 
   .experience-container {
-    height: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -53,6 +52,7 @@
     height: 100%;
 
     .experience-container {
+      height: 100%;
       width: 80%;
 
       h1 {

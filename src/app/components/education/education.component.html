@@ -1,4 +1,4 @@
-<div *ngFor="let education of educationList; let num = index" class="experience-card">
+<div *ngFor="let education of educationList; let num = index" class="education-card">
     <div class="company-details">
         <img [src]="education.logo" alt="Logo" />
         <div>
@@ -9,4 +9,5 @@
     <div class="gpa">
         <p>{{ education.startDate }} - {{ education.endDate || 'Halen' }}</p>
     </div>
+    <hr *ngIf="num < educationList.length - 1 && screenWidth <= 1024" />
 </div>

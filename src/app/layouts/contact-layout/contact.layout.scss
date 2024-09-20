@@ -1,16 +1,12 @@
 .contact-container {
-  width: 80%;
   height: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: start;
 
   h1 {
     font-family: var(--font-title);
-    font-size: 3.1vw;
-    padding: 20px 0 5vh 0;
     margin: 0;
   }
 
@@ -55,4 +51,39 @@
       cursor: pointer;
     }
   }
+}
+
+@media (max-width: 1024px) {
+  app-custom-button-component {
+    display: none;
+  }
+
+  .contact-container {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    justify-content: start;
+
+    h1 {
+      padding: 0;
+      font-size: 25pt;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .contact-container {
+    width: 80%;
+    justify-content: center;
+
+    h1 {
+      padding: 20px 0 0 0;
+      font-size: 3.1vw;
+    }
+  }
+
 }

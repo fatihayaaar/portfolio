@@ -1,9 +1,6 @@
 .custom-container {
-  height: 100%;
 
   .education-container {
-    width: 80%;
-    height: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -12,8 +9,6 @@
 
     h1 {
       font-family: var(--font-title);
-      font-size: 3.1vw;
-      padding: 20px 0 0 0;
       margin: 0;
     }
 
@@ -34,9 +29,37 @@
     display: none;
   }
 
-  .education-container {
-    p {
-      display: none;
+  .custom-container {
+
+    .education-container {
+      width: calc(100% - 20px);
+      margin: 0 10px;
+
+      h1 {
+        padding: 0;
+        font-size: 25pt;
+      }
+
+      p {
+        display: none;
+      }
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .custom-container {
+    height: 100%;
+
+    .education-container {
+      height: 100%;
+      width: 80%;
+
+      h1 {
+        padding: 20px 0 0 0;
+        font-size: 3.1vw;
+      }
+    }
+
   }
 }

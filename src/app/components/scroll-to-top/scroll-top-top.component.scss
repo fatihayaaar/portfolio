@@ -1,7 +1,5 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 25px;
-  right: 35px;
   background-color: var(--button-action-color);
   color: var(--text-color);
   border-radius: 50%;
@@ -16,5 +14,19 @@
 
   &:hover {
     background-color: var(--button-action-hover-color);
+  }
+}
+
+@media (max-width: 1024px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .scroll-to-top {
+    bottom: 25px;
+    right: 35px;
   }
 }

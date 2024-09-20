@@ -22,12 +22,6 @@
   &.bg-color-education {
     background-color: var(--background-secondary-color);
   }
-
-  &.experience-container {
-    position: relative;
-    height: 100vh;
-    justify-content: center;
-  }
 }
 
 .fixed-button {
@@ -171,6 +165,13 @@ body.loaded .component {
       top: 0;
     }
   }
+
+  .section {
+
+    &.layout-container {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media (min-width: 1025px) {
@@ -186,6 +187,15 @@ body.loaded .component {
 
     &.header-fixed-active {
       top: 0;
+    }
+  }
+
+  .section {
+
+    &.layout-container {
+      position: relative;
+      height: 100vh;
+      justify-content: center;
     }
   }
 }
