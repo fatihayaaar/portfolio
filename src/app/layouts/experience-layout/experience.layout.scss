@@ -1,8 +1,6 @@
 .custom-container {
-  height: 100%;
 
   .experience-container {
-    width: 80%;
     height: 100%;
     margin: auto;
     display: flex;
@@ -12,8 +10,6 @@
 
     h1 {
       font-family: var(--font-title);
-      font-size: 3.1vw;
-      padding: 20px 0 0 0;
       margin: 0;
     }
 
@@ -34,9 +30,36 @@
     display: none;
   }
 
-  .experience-container {
-    p {
-      display: none;
+  .custom-container {
+
+    .experience-container {
+      width: calc(100% - 20px);
+      margin: 0 10px;
+
+      h1 {
+        padding: 0;
+        font-size: 25pt;
+      }
+
+      p {
+        display: none;
+      }
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .custom-container {
+    height: 100%;
+
+    .experience-container {
+      width: 80%;
+
+      h1 {
+        padding: 20px 0 0 0;
+        font-size: 3.1vw;
+      }
+    }
+
   }
 }
