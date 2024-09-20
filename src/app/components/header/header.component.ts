@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, HostListener, OnInit} from "@angular/core";
 import {TranslatePipe} from "../../core/pipe/translate.pipe";
 import {TranslateService} from "../../core/services/translate.service";
 import {NgClass, NgIf} from "@angular/common";
@@ -15,11 +15,25 @@ import {ThemeService} from "../../core/services/theme.service";
         NgClass
     ]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
     language: string = "en";
     isMenuOpen = false;
+    screenWidth: number = 0;
 
     constructor(private translator: TranslateService, protected themeService: ThemeService) {
+    }
+
+    ngOnInit(): void {
+        this.getScreenWidth();
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any): void {
+        this.getScreenWidth();
+    }
+
+    getScreenWidth(): void {
+        this.screenWidth = window.innerWidth;
     }
 
     toggleMenu() {

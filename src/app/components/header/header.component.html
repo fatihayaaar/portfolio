@@ -1,36 +1,46 @@
 <div class="navbar navbar-expand-lg">
     <div class="custom-container">
-        <div class="menu-toggle" (click)="toggleMenu()">
+        <div (click)="toggleMenu()" class="menu-toggle">
             <i class="bi bi-list"></i>
         </div>
-        <ul class="navbar-nav" [ngClass]="{'open': isMenuOpen}">
-            <li class="nav-item"  (click)="toggleMenu()">
+        <ul [ngClass]="{'open': isMenuOpen}" class="navbar-nav">
+            <li (click)="toggleMenu()" class="nav-item">
                 <a class="nav-link" href="#section1">{{ 'home' | translate }}</a>
             </li>
-            <li class="nav-item"  (click)="toggleMenu()">
+            <li (click)="toggleMenu()" class="nav-item">
                 <a class="nav-link" href="#section3">{{ 'projects' | translate }}</a>
             </li>
-            <li class="nav-item"  (click)="toggleMenu()">
+            <li (click)="toggleMenu()" class="nav-item">
                 <a class="nav-link" href="#section4">{{ 'experience' | translate }}</a>
             </li>
-            <li class="nav-item"  (click)="toggleMenu()">
+            <li (click)="toggleMenu()" class="nav-item">
                 <a class="nav-link" href="#section5">{{ 'education' | translate }}</a>
             </li>
-            <li class="nav-item"  (click)="toggleMenu()">
+            <li (click)="toggleMenu()" class="nav-item">
                 <a class="nav-link" href="#section6">{{ 'contact' | translate }}</a>
             </li>
-            <li class="nav-item" (click)="switchLanguage()">
-                <div class="language-container">
-                    <p *ngIf="language=='en'">TR</p>
-                    <p *ngIf="language=='tr'">EN</p>
-                </div>
+            <li (click)="switchLanguage()" class="nav-item">
+                <a *ngIf="screenWidth > 1024" class="nav-link">
+                    <div class="language-container">
+                        <p *ngIf="language=='en'">TR</p>
+                        <p *ngIf="language=='tr'">EN</p>
+                    </div>
+                </a>
+                <a *ngIf="screenWidth <= 1024 && language=='tr'" class="nav-link">
+                   Türkçe
+                </a>
+                <a *ngIf="screenWidth <= 1024 && language=='en'" class="nav-link">
+                    English
+                </a>
             </li>
-            <li class="nav-item theme-button" (click)="onClickTheme()">
-                @if (themeService.getIsDarkTheme()) {
-                    <i class="bi bi-brightness-high"></i> Light
-                } @else {
-                    <i class="bi bi-moon"></i> Dark
-                }
+            <li (click)="onClickTheme()" *ngIf="screenWidth <= 1024" class="nav-item theme-button">
+                <a class="nav-link">
+                    @if (themeService.getIsDarkTheme()) {
+                        <i class="bi bi-brightness-high"></i> Light
+                    } @else {
+                        <i class="bi bi-moon"></i> Dark
+                    }
+                </a>
             </li>
         </ul>
     </div>
