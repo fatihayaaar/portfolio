@@ -11,16 +11,6 @@
       font-family: var(--font-title);
       margin: 0;
     }
-
-    p {
-      margin-right: 50px;
-      margin-top: 2.5vh;
-      margin-bottom: 5vh;
-      line-height: 3.5vh;
-      font-size: 1vw;
-      color: var(--text-secondary-color);
-      font-family: var(--font);
-    }
   }
 }
 
@@ -41,7 +31,13 @@
       }
 
       p {
-        display: none;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        line-height: 15pt;
+        font-size: 10pt;
+        color: var(--text-secondary-color);
+        font-family: var(--font);
       }
     }
   }
@@ -59,7 +55,16 @@
         padding: 20px 0 0 0;
         font-size: 3.1vw;
       }
-    }
 
+      p {
+        margin-right: 50px;
+        margin-top: 2.5vh;
+        margin-bottom: 5vh;
+        line-height: 3.5vh;
+        font-size: 1vw;
+        color: var(--text-secondary-color);
+        font-family: var(--font);
+      }
+    }
   }
 }
